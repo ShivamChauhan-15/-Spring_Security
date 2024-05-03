@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
     @GetMapping("/home")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('USER')")   //here we don't need to write ROLE_USER
 //    @Secured({"ROLE_ADMIN"})
     public String home(){
         System.out.println("in home controller");
